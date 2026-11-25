@@ -1,0 +1,240 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 25px 15px 40px;
+  color: #17233b;
+  background: #f4f7fb;
+  font-family: sans-serif;
+}
+
+.app {
+  width: 100%;
+  max-width: 620px;
+  margin: auto;
+}
+
+.page-header {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.eyebrow {
+  color: #4169e1;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+.page-header p {
+  color: #718096;
+  font-size: 14px;
+}
+
+.panel {
+  padding: 22px;
+  border: 1px solid #e8edf4;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 8px 25px #22365b0c;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.field {
+  margin-bottom: 17px;
+}
+
+.field > label,
+legend {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px;
+  border: 1px solid #dce3ed;
+  border-radius: 10px;
+  background: #fbfcfe;
+  font-size: 16px;
+}
+
+.status-field {
+  padding: 0;
+  border: 0;
+}
+
+.radio-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.radio-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 8px;
+  border: 1px solid #dce3ed;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.radio-card input {
+  accent-color: #4169e1;
+}
+
+.submit-button {
+  width: 100%;
+  min-height: 50px;
+  border: none;
+  border-radius: 11px;
+  background: #4169e1;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.summary-card {
+  padding: 15px 5px;
+  border-radius: 14px;
+  background: white;
+  text-align: center;
+  font-size: 13px;
+  box-shadow: 0 5px 18px #22365b0a;
+}
+
+.summary-card span {
+  display: block;
+  color: #718096;
+}
+
+.summary-card strong {
+  color: #4169e1;
+  font-size: 25px;
+}
+
+.list-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.record-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.record-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 14px 0;
+  border-bottom: 1px solid #e8edf4;
+}
+
+.record-identity,
+.record-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.record-name {
+  font-weight: bold;
+}
+
+.class-badge,
+.status-badge {
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.class-badge {
+  background: #edf2ff;
+  color: #3c5fc2;
+}
+
+.status-attend {
+  background: #e7f6ef;
+  color: #16845b;
+}
+
+.status-absent {
+  background: #fff0ef;
+  color: #c84f4b;
+}
+
+.delete-button {
+  padding: 8px 12px;
+  border: 1px solid #f1d3d1;
+  border-radius: 8px;
+  background: white;
+  color: #c84f4b;
+  cursor: pointer;
+}
+
+#empty-message {
+  padding: 20px 0;
+  color: #8994a5;
+  text-align: center;
+}
+
+#empty-message[hidden] {
+  display: none;
+}
+
+footer {
+  padding-top: 20px;
+  color: #8994a5;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 420px) {
+  body {
+    padding: 18px 12px 30px;
+  }
+
+  .panel {
+    padding: 17px 14px;
+  }
+
+  .record-item {
+    align-items: flex-start;
+  }
+
+  .record-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

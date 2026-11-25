@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4f7fb">
+  <title>イベント出欠確認</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="page-header">
+      <div class="eyebrow">EVENT MANAGEMENT</div>
+      <h1>イベント出欠確認</h1>
+      <p>出欠を登録して、参加者を確認できます。</p>
+    </header>
+
+    <section class="panel">
+      <h2>出欠を登録</h2>
+
+      <form id="rsvp-form">
+        <div class="field">
+          <label for="userclass">クラス</label>
+          <select id="userclass" required>
+            <option value="">クラスを選択</option>
+            <option value="1組">1組</option>
+            <option value="2組">2組</option>
+            <option value="3組">3組</option>
+            <option value="4組">4組</option>
+            <option value="5組">5組</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="username">名前</label>
+          <input type="text" id="username">
+        </div>
+
+        <fieldset class="field status-field">
+          <legend>出欠の選択</legend>
+          <div class="radio-options">
+            <label class="radio-card">
+              <input type="radio" name="status"
+                value="参加" checked>
+              参加する
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="status"
+                value="不参加">
+              参加しない
+            </label>
+          </div>
+        </fieldset>
+
+        <button class="submit-button" type="submit">
+          登録する
+        </button>
+      </form>
+    </section>
+
+    <section class="summary-grid">
+      <div class="summary-card">
+        <span>参加</span>
+        <strong id="attend-count">0</strong>名
+      </div>
+      <div class="summary-card">
+        <span>不参加</span>
+        <strong id="absent-count">0</strong>名
+      </div>
+      <div class="summary-card">
+        <span>登録合計</span>
+        <strong id="total-count">0</strong>名
+      </div>
+    </section>
+
+    <section class="panel list-panel">
+      <div class="list-heading">
+        <h2>登録者一覧</h2>
+        <span id="list-count">0件</span>
+      </div>
+
+      <ul id="list" class="record-list"></ul>
+      <p id="empty-message">まだ登録者はいません。</p>
+    </section>
+
+    <footer>
+      登録内容は、このブラウザに保存されます。
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
